@@ -20,6 +20,7 @@ const Header = () => {
         </div>
         <nav className="nav-menu">
           <a href="#services">Services</a>
+          <a href="#process">Protocol</a>
           <a href="#why-us">Why Us</a>
           <a href="#contact" className="contact-btn">Let's Talk</a>
         </nav>
