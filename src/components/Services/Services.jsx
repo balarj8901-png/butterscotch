@@ -8,8 +8,8 @@ const servicesData = [
     features: ['Niche Positioning', 'Competitor Analysis', 'Content Calendar Creation'],
     icon: '🧭'
   },
-  
-  
+  {
+    title: 'Premium Video Production',
     desc: 'High-retention, premium quality short-form and long-form video editing designed for modern attention spans.',
     features: ['Dynamic Editing', 'Scriptwriting Assistance', 'Thumbnail Design'],
     icon: '🎬'
