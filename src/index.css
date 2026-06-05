@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Butterscotch Vibe Palette */
+  --bg-dark: #120c08;
+  --bg-card: #1b120d;
+  --border-subtle: #2e1d13;
+  --accent-gold: #d9923b;
+  --accent-glow: rgba(217, 146, 59, 0.2);
+  --accent-cream: #f6e6d1;
+  --text-primary: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.65);
+  
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent-cream);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Utilities */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.text-gold {
+  color: var(--accent-gold);
+}
+
+.bg-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Primary Button */
+.btn-primary {
+  display: inline-block;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, #d9923b, #b86b25);
+  color: #120c08;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(217, 146, 59, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(217, 146, 59, 0.4);
+}
