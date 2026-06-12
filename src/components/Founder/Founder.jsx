@@ -15,7 +15,7 @@ const Founder = () => {
             <div className="founder-border-accent"></div>
             <img 
               src="/founder.jpeg" 
-              alt="Darsit Dayala - Founder of Butterscotch Media" 
+              alt="Darshit Dayala - Founder of Butterscotch Media" 
               className="founder-img" 
             />
             <div className="founder-experience-tag">
@@ -52,7 +52,7 @@ const Founder = () => {
 
           <div className="founder-footer">
             <div className="founder-signature-block">
-              <h3 className="founder-name">Darsit Dayala</h3>
+              <h3 className="founder-name">Darshit Dayala</h3>
               <p className="founder-role">Founder & Creative Director</p>
             </div>
             
