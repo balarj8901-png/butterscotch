@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* Butterscotch Vibe Palette */
-  --bg-dark: #120c08;
-  --bg-card: #1b120d;
-  --border-subtle: #2e1d13;
-  --accent-gold: #d9923b;
-  --accent-glow: rgba(217, 146, 59, 0.2);
-  --accent-cream: #f6e6d1;
-  --text-primary: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.65);
+  /* Premium Light Butterscotch Palette */
+  --bg-dark: #FAF8F5;          /* Premium off-white/alabaster */
+  --bg-card: #FFFFFF;          /* Pure white card */
+  --border-subtle: #EFEAE2;    /* Delicate warm-gray/champagne border */
+  --accent-gold: #C17D2D;      /* Refined gold with higher contrast for light background */
+  --accent-glow: rgba(193, 125, 45, 0.06); /* Soft gold radial glow */
+  --accent-cream: #261B14;     /* Reused as dark heading color */
+  --text-primary: #1E1610;     /* Rich deep charcoal/espresso */
+  --text-muted: #6D5E53;       /* Warm muted taupe */
   
   --font-display: 'Playfair Display', serif;
   --font-sans: 'Outfit', sans-serif;
@@ -92,3 +92,106 @@ button {
   transform: translateY(-3px);
   box-shadow: 0 15px 30px rgba(217, 146, 59, 0.4);
 }
+
+/* Scroll Reveal animation triggers */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: opacity, transform;
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Morphing liquid blob animation for background glows */
+.bg-glow {
+  animation: liquid-blob 25s infinite alternate ease-in-out;
+  will-change: border-radius, transform;
+}
+
+@keyframes liquid-blob {
+  0% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+    transform: translate(30px, -50px) scale(1.08) rotate(120deg);
+  }
+  66% {
+    border-radius: 28% 72% 37% 63% / 51% 43% 57% 49%;
+    transform: translate(-40px, 40px) scale(0.92) rotate(240deg);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform: translate(0, 0) scale(1) rotate(360deg);
+  }
+}
+
+/* Staggered Word Reveal Animations */
+.reveal-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-visible .reveal-word {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-word-1 { transition-delay: 0.15s; }
+.reveal-word-2 { transition-delay: 0.3s; }
+.reveal-word-3 { transition-delay: 0.45s; }
+.reveal-word-4 { transition-delay: 0.6s; }
+
+/* Premium Gold Shimmer sweep for buttons */
+.btn-primary, .btn-service-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after, .btn-service-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.btn-primary:hover::after, .btn-service-primary:hover::after {
+  animation: shimmer-sweep 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-glow {
+    animation: none !important;
+    border-radius: 50% !important;
+    transform: none !important;
+  }
+}
+

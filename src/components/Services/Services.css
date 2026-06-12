@@ -22,65 +22,156 @@
   line-height: 1.6;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.service-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  padding: 40px;
-  border-radius: 12px;
-  text-align: left;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+.single-service-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
-.service-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent-gold);
-  box-shadow: 0 15px 30px rgba(217, 146, 59, 0.1);
+.single-service-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 50px 40px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(38, 27, 20, 0.06);
+  text-align: left;
 }
 
-.service-icon {
-  font-size: 48px;
+.service-icon-box {
+  background-color: #ba9361; /* Brown/gold background */
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   margin-bottom: 24px;
 }
 
-.service-card h3 {
-  font-size: 24px;
+.single-service-title {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.single-service-subtitle {
+  font-size: 18px;
+  color: #7d7265;
+  margin-bottom: 32px;
+}
+
+.service-section {
+  margin-bottom: 32px;
+}
+
+.service-section-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #b08d5f;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   margin-bottom: 16px;
   font-family: var(--font-sans);
-  color: var(--text-primary);
 }
 
-.service-desc {
-  color: var(--text-muted);
-  font-size: 15px;
-  margin-bottom: 24px;
-  flex-grow: 1;
-}
-
-.service-features {
+.service-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 20px;
 }
 
-.service-features li {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 10px;
+.service-list li {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 12px;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
 }
 
-.service-features li:last-child {
-  margin-bottom: 0;
+.check-icon {
+  color: #c98542; /* Orange-ish brown */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bold-list li {
+  font-weight: 700;
+  color: #222222;
+}
+
+.service-quote-box {
+  background-color: #fcf8f2;
+  border-left: 4px solid #bba383;
+  border-radius: 8px;
+  padding: 20px 24px;
+  font-size: 16px;
+  color: #6d6255;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.service-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn-service-secondary {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(to bottom, #f3ede2, #e9e1d3);
+  border: 1px solid #d4c2aa;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: #9a764d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-service-secondary:hover {
+  background: linear-gradient(to bottom, #eae4d9, #e0d8ca);
+}
+
+.btn-service-primary {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(to bottom, #b49366, #a17f54);
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(180, 147, 102, 0.3);
+}
+
+.btn-service-primary:hover {
+  background: linear-gradient(to bottom, #a17f54, #8f6e45);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .single-service-card {
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .single-service-title {
+    font-size: 26px;
+  }
 }

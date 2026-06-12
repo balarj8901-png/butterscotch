@@ -8,13 +8,14 @@ const Hero = () => {
       <div className="bg-glow hero-glow-2"></div>
       <div className="container hero-container">
         <div className="hero-content">
-          <div className="hero-badge">The New Standard in Creator Growth</div>
+          <div className="hero-badge">The Ultimate Authority in Personal Branding</div>
           <h1 className="hero-title">
-            We Craft <br/>
-            <span className="text-gold">Attention.</span>
+            <span className="reveal-word reveal-word-1">We</span>{' '}
+            <span className="reveal-word reveal-word-2">Build</span> <br/>
+            <span className="reveal-word reveal-word-3 text-gold">Authority.</span>
           </h1>
           <p className="hero-subtitle">
-            Butterscotch Media is a premium agency focused on accelerating personal brands. We turn your raw expertise into undeniable influence and scalable revenue.
+            Butterscotch Media is an elite agency that turns your unique expertise into an undeniable personal brand. We build your digital authority so you can command attention, scale your business, and lead your industry.
           </p>
           <div className="hero-cta-group">
             <a href="#contact" className="btn-primary">Start Your Journey</a>
@@ -29,12 +30,12 @@ const Hero = () => {
             <div className="metric-divider"></div>
             <div className="metric">
               <span className="metric-value">Top 1%</span>
-              <span className="metric-label">Creator Strategies</span>
+              <span className="metric-label">Personal Brands</span>
             </div>
             <div className="metric-divider"></div>
             <div className="metric">
-              <span className="metric-value">24/7</span>
-              <span className="metric-label">Dedicated Support</span>
+              <span className="metric-value">1-on-1</span>
+              <span className="metric-label">Elite Advisory</span>
             </div>
           </div>
         </div>

@@ -1,0 +1,52 @@
+.custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-gold);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: -3px;
+  margin-left: -3px;
+  pointer-events: none;
+  z-index: 99999;
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+}
+
+.custom-cursor-ring {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(193, 125, 45, 0.25) 0%, rgba(193, 125, 45, 0.05) 40%, transparent 70%);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: -40px;
+  margin-left: -40px;
+  pointer-events: none;
+  z-index: 99998;
+  mix-blend-mode: multiply;
+  filter: blur(1px);
+  /* Trailing effect via ease transform in js requestAnimationFrame */
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              height 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              margin-top 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              margin-left 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              background 0.3s ease;
+}
+
+/* Hover States for Interactive Elements */
+.custom-cursor-dot.hovered {
+  width: 4px;
+  height: 4px;
+  background-color: var(--text-primary);
+}
+
+.custom-cursor-ring.hovered {
+  width: 120px;
+  height: 120px;
+  margin-top: -60px;
+  margin-left: -60px;
+  background: radial-gradient(circle, rgba(193, 125, 45, 0.4) 0%, rgba(193, 125, 45, 0.1) 50%, transparent 70%);
+}
+
